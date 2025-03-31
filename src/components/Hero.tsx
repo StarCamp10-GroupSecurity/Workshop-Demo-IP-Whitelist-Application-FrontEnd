@@ -1,13 +1,49 @@
 import React from 'react';
+import { Box, Typography, Container, Fade } from '@mui/material';
 
 const Hero: React.FC = () => {
   return (
-    <section className="py-12 text-center bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-white">
-      <h1 className="text-4xl font-bold mb-4">Welcome to IP Whitelisting</h1>
-      <p className="text-lg max-w-2xl mx-auto">
-        Our project helps you understand your online presence by analyzing your email and IP data.
-      </p>
-    </section>
+    <Box
+      sx={{
+        py: 8,
+        textAlign: 'center',
+        backgroundColor: 'var(--primary-black)',
+        color: 'var(--primary-white)',
+        borderBottom: '4px solid var(--primary-red)',
+      }}
+    >
+      <Container maxWidth="lg">
+        <Fade in={true} timeout={1000}>
+          <Box>
+            <Typography
+              variant="h3"
+              fontWeight="bold"
+              gutterBottom
+              sx={{
+                textTransform: 'uppercase',
+                letterSpacing: '1px',
+              }}
+            >
+              Welcome to <span style={{ color: 'var(--primary-red)' }}>IP Whitelisting</span>
+            </Typography>
+
+            <Typography
+              variant="h6"
+              maxWidth="md"
+              mx="auto"
+              sx={{
+                opacity: 0.9,
+                fontWeight: 300,
+                letterSpacing: '0.5px'
+              }}
+            >
+              Understand your online presence by analyzing your email and IP data with
+              our professional security tools.
+            </Typography>
+          </Box>
+        </Fade>
+      </Container>
+    </Box>
   );
 };
 
