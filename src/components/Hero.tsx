@@ -1,5 +1,5 @@
+import { Box, Container, Fade, Typography } from '@mui/material';
 import React from 'react';
-import { Box, Typography, Container, Fade } from '@mui/material';
 
 const Hero: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
         textAlign: 'center',
         backgroundColor: 'var(--primary-black)',
         color: 'var(--primary-white)',
-        borderBottom: '4px solid var(--primary-red)',
+        // borderBottom: '4px solid var(--primary-red)',
       }}
     >
       <Container maxWidth="lg">
@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
                 letterSpacing: '1px',
               }}
             >
-              Welcome to <span style={{ color: 'var(--primary-red)' }}>IP Whitelisting</span>
+              StarCamp Batch 10:<span style={{ color: 'var(--primary-red)' }}> IaC Practice with the Gatekeepers</span>
             </Typography>
 
             <Typography
@@ -37,8 +37,7 @@ const Hero: React.FC = () => {
                 letterSpacing: '0.5px'
               }}
             >
-              Understand your online presence by analyzing your email and IP data with
-              our professional security tools.
+              Welcome to the StarCamp Batch 10 Gatekeepers' fun, interactive IaC experience! Send us your IP address via Teams, and we’ll select some of you to configure with IaC and add your IP to our firewall whitelist. After that, enter your NAB email, click "SEE OUR IMPRESSION ABOUT YOU" and you’ll instantly receive our impression of you. Ready to test your skills? Let’s go!
             </Typography>
           </Box>
         </Fade>

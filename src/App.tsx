@@ -1,8 +1,7 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import EmailAnalyzer from './components/EmailAnalyzer';
 import { Box, CssBaseline } from '@mui/material';
+import EmailAnalyzer from './components/EmailAnalyzer';
+import Hero from './components/Hero';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -11,7 +10,7 @@ function App() {
       <Box
         sx={{
           minHeight: '100vh',
-          backgroundColor: 'var(--primary-white)',
+          backgroundColor: 'var(--primary-black)',
           display: 'flex',
           flexDirection: 'column'
         }}

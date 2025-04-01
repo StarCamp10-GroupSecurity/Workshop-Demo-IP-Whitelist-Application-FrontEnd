@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
 import {
-  TextField,
-  Button,
-  Paper,
-  Typography,
-  CircularProgress,
+  Alert,
   Box,
+  Button,
+  CircularProgress,
   Container,
   Fade,
   Grow,
-  Alert
+  Paper,
+  TextField,
+  Typography
 } from '@mui/material';
+import React, { useState } from 'react';
 
 const EmailAnalyzer: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -27,7 +27,7 @@ const EmailAnalyzer: React.FC = () => {
     setSuccess(false);
 
     try {
-      const response = await fetch('https://w4r1mw61pe.execute-api.us-east-1.amazonaws.com/production/starcampnocors', {
+      const response = await fetch('https://rfn4cuetbe.execute-api.us-east-1.amazonaws.com/production/starcamp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -58,9 +58,12 @@ const EmailAnalyzer: React.FC = () => {
           sx={{
             mx: 'auto',
             p: 4,
-            borderRadius: 2,
+            borderRadius: 6,
             border: '1px solid rgba(0, 0, 0, 0.1)',
-            borderTop: '4px solid var(--primary-red)',
+            // borderTop: '4px solid var(--primary-red)',
+            backgroundColor: '#A0A0A0',
+            boxShadow: '0 0 48px 16px rgba(255, 255, 255, 0.7)'
+
           }}
         >
           <Typography
@@ -87,6 +90,7 @@ const EmailAnalyzer: React.FC = () => {
               required
               sx={{
                 mb: 3,
+                '& .MuiOutlinedInput-root': { borderRadius: 6 },
                 '& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline': {
                   borderColor: 'var(--primary-red)',
                 },
@@ -95,6 +99,9 @@ const EmailAnalyzer: React.FC = () => {
                 },
                 '& .MuiInputLabel-root.Mui-focused': {
                   color: 'var(--primary-red)',
+                },
+                '& .MuiInputLabel-root': {
+                // transform: 'translateX(30px)', // Adjust this value to shift further right
                 }
               }}
             />
@@ -104,8 +111,11 @@ const EmailAnalyzer: React.FC = () => {
               variant="contained"
               fullWidth
               disabled={loading}
+              
               sx={{
                 py: 1.5,
+                borderRadius: 6,
+                fontWeight: 700,
                 backgroundColor: 'var(--primary-red)',
                 '&:hover': {
                   backgroundColor: 'rgba(237, 0, 0, 0.8)',
@@ -115,7 +125,7 @@ const EmailAnalyzer: React.FC = () => {
                 }
               }}
             >
-              {loading ? <CircularProgress size={24} sx={{ color: 'white' }} /> : 'Analyze Email'}
+              {loading ? <CircularProgress size={24} sx={{ color: 'white', fontWeight: 700 }} /> : 'See Our Impression About You'}
             </Button>
           </form>
 
@@ -135,6 +145,9 @@ const EmailAnalyzer: React.FC = () => {
                 bgcolor={success ? 'rgba(0, 0, 0, 0.05)' : 'rgba(237, 0, 0, 0.05)'}
                 borderRadius={2}
                 border="1px solid rgba(0, 0, 0, 0.1)"
+                sx={{
+                  borderRadius: 6,
+                }}
               >
                 <Typography
                   variant="body1"
