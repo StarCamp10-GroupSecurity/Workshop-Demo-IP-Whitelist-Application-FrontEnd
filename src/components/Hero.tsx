@@ -16,28 +16,41 @@ const Hero: React.FC = () => {
         <Fade in={true} timeout={1000}>
           <Box>
             <Typography
-              variant="h3"
-              fontWeight="bold"
-              gutterBottom
-              sx={{
-                textTransform: 'uppercase',
-                letterSpacing: '1px',
-              }}
+            variant="h3"
+            fontWeight="bold"
+            gutterBottom
+            sx={{
+              textTransform: 'uppercase',
+              letterSpacing: '1px',
+            }}
             >
-              StarCamp Batch 10:<span style={{ color: 'var(--primary-red)' }}> IaC Practice with the Gatekeepers</span>
+            IP Whitelisting Hands-On Lab:
+            <span style={{ color: 'var(--primary-red)' }}> IaC Practice with the Gatekeepers</span>
             </Typography>
 
             <Typography
-              variant="h6"
-              maxWidth="md"
-              mx="auto"
-              sx={{
-                opacity: 0.9,
-                fontWeight: 300,
-                letterSpacing: '0.5px'
-              }}
+            variant="h5"
+            gutterBottom
+            sx={{
+              fontWeight: 500,
+              letterSpacing: '0.5px',
+            }}
             >
-              Welcome to the StarCamp Batch 10 Gatekeepers' fun, interactive IaC experience! Send us your IP address via Teams, and we’ll select some of you to configure with IaC and add your IP to our firewall whitelist. After that, enter your NAB email, click "SEE OUR IMPRESSION ABOUT YOU" and you’ll instantly receive our impression of you. Ready to test your skills? Let’s go!
+            StarCamp Batch 10
+            </Typography>
+
+            <Typography
+            variant="h6"
+            maxWidth="md"
+            mx="auto"
+            sx={{
+              opacity: 0.9,
+              fontWeight: 300,
+              letterSpacing: '0.5px',
+              marginTop: '1rem'
+            }}
+            >
+            Welcome to our interactive Infrastructure as Code workshop! Send your IP address via Teams, and we'll select participants to implement IaC for whitelist configuration. Once added to our firewall, enter your NAB email, click "SEE OUR IMPRESSION ABOUT YOU" and discover it. Cheers!
             </Typography>
           </Box>
         </Fade>
